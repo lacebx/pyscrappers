@@ -1,10 +1,10 @@
-# pyscrappers — Python Web Scraping Templates
+# pyscrappers, Python Web Scraping Templates
 
-Built this because I got tired of rewriting the same Selenium boilerplate every time I needed to pull data off a website. `pyscrappers` is a growing collection of reusable Python scraping templates — drop in your URL and CSS selectors, and walk away with a CSV.
+Built this because I got tired of rewriting the same Selenium boilerplate every time I needed to pull data off a website. `pyscrappers` is a growing collection of reusable Python scraping templates, drop in your URL and CSS selectors, and walk away with a CSV.
 
 The idea is simple: scraping the web follows the same pattern almost every time. You load a page, wait for elements to appear, loop through them, extract what you need, and dump it somewhere useful. This repo captures that pattern so you don't have to reinvent it.
 
-> *Birarenze* — the best tools are the ones you built yourself.
+The best tools are the ones you built yourself, and I think this is birarenze for that exact reason.
 
 ---
 
@@ -40,12 +40,13 @@ You'll also need:
 Open `text_scrapper.py` and replace the placeholder values:
 
 ```python
-driver.get('siteURL')                  # ← Your target URL
-'.container of what you want to scrape' # ← CSS selector for your element container
-'actual text/thing you want to scrape'  # ← CSS selector for the text element
+driver.get('siteURL')                        # Your target URL
+'.container of what you want to scrape'      # CSS selector for your element container
+'actual text/thing you want to scrape'       # CSS selector for the text element
 ```
 
 Then run:
+
 ```bash
 python text_scrapper.py
 ```
@@ -55,7 +56,6 @@ Output: `yourthings.csv` in the same directory.
 ---
 
 ## Tech Stack
-
 - **Language:** Python 3
 - **Automation:** Selenium WebDriver
 - **Export:** Python `csv` module
@@ -64,11 +64,10 @@ Output: `yourthings.csv` in the same directory.
 ---
 
 ## What's Coming
-
 This is meant to be a library of templates. Future additions:
-- `image_scrapper.py` — download images from a page
-- `table_scrapper.py` — extract HTML tables to CSV/JSON
-- `pagination_scrapper.py` — handle multi-page sites
-- `auth_scrapper.py` — scrape behind login walls
+- `image_scrapper.py` - download images from a page
+- `table_scrapper.py` - extract HTML tables to CSV/JSON
+- `pagination_scrapper.py` - handle multi-page sites
+- `auth_scrapper.py` - scrape behind login walls
 
 Pull requests welcome if you've got a pattern worth adding.
